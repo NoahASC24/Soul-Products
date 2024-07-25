@@ -1,0 +1,475 @@
+html {
+    background-color: rgb(49, 49, 49);
+}
+
+.Header {
+    background-color: rgb(34, 34, 34);
+    font-family:Georgia;
+
+    img {
+        padding-left:10px;
+        padding-top:10px;
+        width: 150px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+
+    #Gallery {
+      a {
+        text-decoration: none;
+        color:white;
+      }
+        border: 3px solid white;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top:40px;
+        margin-bottom:40px;
+        font-size:20px;
+    }
+    #Order {
+      a {
+        text-decoration: none;
+        color:white;
+      }
+        border: 3px solid white;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top:40px;
+        margin-bottom:40px;
+        font-size:20px;
+        color:white
+    }
+    #About {
+      a {
+        text-decoration: none;
+        color:white;
+      }
+        border: 3px solid white;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top:40px;
+        margin-bottom:40px;
+        font-size:20px;
+        color:white
+    }
+    #Language {
+        border: 3px solid white;
+        border-radius:20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top:40px;
+        margin-bottom:40px;
+        font-size:20px;
+        color:white
+    }
+}
+
+.Straight {
+    color:white;
+    padding-right:10px;
+    font-size:40px;
+    font-family:Georgia;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.From {
+    color:white;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:40px;
+    font-family:Georgia;
+    animation: fadeIn 10s;
+    -webkit-animation: fadeIn 10s;
+    -moz-animation: fadeIn 10s;
+    -o-animation: fadeIn 10s;
+    -ms-animation: fadeIn 10s;
+}
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.The {
+    color:white;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:40px;
+    font-family:Georgia;
+    animation: fadeIn 15s;
+    -webkit-animation: fadeIn 15s;
+    -moz-animation: fadeIn 15s;
+    -o-animation: fadeIn 15s;
+    -ms-animation: fadeIn 15s;
+}
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.Soul {
+    color:white;
+    padding-left:10px;
+    font-size:40px;
+    font-family:Georgia;
+    animation: fadeIn 15s;
+    -webkit-animation: fadeIn 15s;
+    -moz-animation: fadeIn 15s;
+    -o-animation: fadeIn 15s;
+    -ms-animation: fadeIn 15s;
+}
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.Motivational_Text {
+    margin-left:1000px;
+    margin-right:1000px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top:60px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+}
+
+.Lamp_Video {
+  nav {
+    display: flex;
+    text-align: center;
+  margin-left:705px;
+  margin-right:700px;
+  border: 5px solid white;
+  margin-top:100px;
+  padding:10px;
+  }
+  
+}
+
+#Process {
+  nav {
+    display: flex;
+    border: 3px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top:40px;
+    margin-bottom:60px;
+    margin-left:1100px;
+    margin-right:1100px;
+    font-size:40px;
+    color:White;
+    text-align: center;
+  }
+ 
+}
+
+.Blender_1 {
+  nav {
+    display:flex;
+    justify-content: space-around;
+
+    #Hobbit {
+      color:white;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom:30px;
+    }
+    #Medieval {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-bottom:30px;
+    }
+    #School {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-bottom:30px;
+    }
+    #Matsuri {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-bottom:30px;
+    }
+  }
+}
+
+.Blender_2 {
+  nav {
+    display:flex;
+    justify-content: space-around;
+
+    #Bench {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Pueblo {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Tulip {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Zaku {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+}
+
+.RS_1 {
+  nav {
+    display: flex;
+    justify-content: space-around;
+
+    #Easter {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Town {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Futuristic {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Festival {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+}
+
+.RS_2 {
+  nav {
+    display: flex;
+    justify-content: space-around;
+
+    #Chair {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Egyptian {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Flower {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    #Mobile {
+      color:white;
+      font-size: 30px;
+      text-align:center;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+  }
+}
+.Reason {
+  color:white;
+  font-family:Georgia;
+  font-size:15px;
+  margin-top:100px;
+  margin-left: 50px;
+  padding:20px;
+  background-color: rgb(34, 34, 34);;
+}
+.email {
+  color:white;
+  margin-top: 50px;
+  text-align: center;
+}
+.prices {
+  color:white;
+  text-align: center;
+  margin-top:70px;
+  border: 3px solid white;
+  margin-left:1000px;
+  margin-right:1000px;
+}
+.Cube {
+  color:white;
+  font-family: Georgia;
+  margin-top: 50px;
+  text-align: center;
+}
+.theCube {
+  margin-top:70px;
+  text-align: center;
+}
+.p1 {
+  margin-top:70px;
+  text-align: center;
+  color:white;
+  font-family: Georgia;
+  font-size:40
+}
+.man {
+  margin-top:50px;
+  text-align:center;
+}
+.p2 {
+  margin-top:70px;
+  text-align: center;
+  color:white;
+  font-family: Georgia;
+  font-size:40
+}
+.footer {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    color:white;
+    p {
+      color:white;
+      padding-bottom:30px;
+      padding-top:30px;
+    }
+    a {
+      text-decoration: none;
+      color:white;
+      padding-bottom:30px;
+      padding-top:45px;
+    }
+    img {
+      padding-bottom:30px;
+      padding-top:30px;
+    }
+  margin-top:70px;
+  background-color: rgb(34, 34, 34);
+    font-family:Georgia;  
+  }
+}
