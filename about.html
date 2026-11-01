@@ -1,49 +1,663 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soul_Products</title>
-    <link rel="stylesheet" href="Soul.css">
+  <script>
+    window.FontAwesomeConfig = {
+      autoReplaceSvg: 'nest'
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: '#1c1c1c',
+            coal: '#222222',
+            slate2: '#2b2b2b',
+            soul: '#313131',
+            glow: '#F2C27B',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(18px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+          },
+          animation: {
+            fadeUp: 'fadeUp 0.9s cubic-bezier(.2,.7,.2,1) forwards',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="Soul.css">
 </head>
-<body>
-    <div class="Header"> 
-        <nav>     
-        <div>
-            <a href="index.html"><img src="images/image-removebg-preview (27).png"></a></div>
-        <div id="Gallery">
-            <a href="gallery.html">Gallery</a></div>
-        <div id="Order">
-            <a href="order.html">Order Now</a></div>
-        <div id="About">
-            <a href="about.html">About Us</a></div>
-        <div id="Language">English</div></nav>
+
+<body class="bg-soul text-white font-sans antialiased overflow-x-hidden">
+  <header id="header" class="sticky top-0 z-50 bg-coal/90 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2.5 group"><span class="w-8 h-8 border-2 border-white flex items-center justify-center group-hover:rotate-45 transition-transform duration-500"><span class="w-2.5 h-2.5 bg-glow"></span></span><span class="font-serif text-2xl tracking-tight">Soul_Products</span></a>
+      <nav id="desktop-nav" class="hidden md:flex items-center gap-1">
+        <a href="#home" data-link="home" class="nav-link px-4 py-2 text-sm hover:text-white transition text-white/70">Home</a>
+        <a href="#projects" data-link="projects" class="nav-link px-4 py-2 text-sm hover:text-white transition text-white/70">Projects</a>
+        <a href="#process" data-link="process" class="nav-link px-4 py-2 text-sm hover:text-white transition text-white/70">Process</a>
+        <a href="#about" data-link="about" class="nav-link px-4 py-2 text-sm hover:text-white transition text-white">About</a>
+        <a href="#contact" class="ml-3 px-5 py-2 text-sm border-2 border-white hover:bg-white hover:text-ink transition">Contact</a>
+      </nav>
+      <button id="menu-btn" aria-label="Open menu" class="md:hidden w-10 h-10 flex items-center justify-center border border-white/30"><i class="fa-solid fa-bars text-lg"></i></button>
     </div>
-    <div class="Cube">
-        <h1>
-            It all started with a cube...
-        </h1>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-coal">
+      <div class="px-5 py-4 flex flex-col">
+        <a href="#home" class="mobile-link py-3 border-b border-white/10 flex justify-between items-center">Home <i class="fa-solid fa-arrow-down text-xs text-white/40"></i></a>
+        <a href="#projects" class="mobile-link py-3 border-b border-white/10 flex justify-between items-center">Projects <i class="fa-solid fa-arrow-down text-xs text-white/40"></i></a>
+        <a href="#process" class="mobile-link py-3 border-b border-white/10 flex justify-between items-center">Process <i class="fa-solid fa-arrow-down text-xs text-white/40"></i></a>
+        <a href="#about" class="mobile-link py-3 border-b border-white/10 flex justify-between items-center">About <i class="fa-solid fa-arrow-down text-xs text-white/40"></i></a>
+        <a href="#contact" class="mobile-link mt-4 py-3 text-center border-2 border-white">Contact</a>
+      </div>
     </div>
-    <div class="theCube">
-        <img src="images/Screenshot 2024-07-21 225408.png" width="500" height="400">
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative scroll-mt-20 overflow-hidden lg:h-[780px]">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute -top-40 right-0 w-[520px] h-[520px] rounded-full bg-glow/10 blur-3xl"></div>
+        <div class="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-16 md:pt-20 lg:pt-24 grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <div id="hero-copy" class="lg:col-span-6">
+          <p class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-white/60 border border-white/20 px-3 py-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-glow"></span> 3D Portfolio · Blender &amp; Roblox Studio
+          </p>
+          <h1 class="font-serif leading-[0.9] mt-7 text-[64px] sm:text-[88px] lg:text-[112px]">
+            <span class="block opacity-0 animate-fadeUp">Straight</span>
+            <span class="block opacity-0 animate-fadeUp [animation-delay:250ms] italic text-white/80">From The</span>
+            <span class="block opacity-0 animate-fadeUp [animation-delay:500ms]">Soul<span class="text-glow">.</span></span>
+          </h1>
+          <p class="mt-7 max-w-md text-white/65 text-base sm:text-lg leading-relaxed opacity-0 animate-fadeUp [animation-delay:700ms]">
+            A collection of models, worlds, and game-ready assets — every one of them started life as a single cube.
+          </p>
+          <div class="mt-9 flex flex-col sm:flex-row gap-3 opacity-0 animate-fadeUp [animation-delay:850ms]">
+            <a href="#projects" class="inline-flex items-center justify-center gap-3 px-7 py-4 bg-white text-ink font-medium hover:bg-glow transition">
+              View projects <i class="fa-solid fa-arrow-down text-sm"></i></a>
+            <a href="#about" class="inline-flex items-center justify-center gap-3 px-7 py-4 border-2 border-white/80 hover:bg-white/10 transition">
+              The story
+            </a>
+          </div>
+        </div>
+        <div id="hero-reel" class="lg:col-span-6">
+          <div class="relative border-2 border-white p-2 sm:p-3 bg-coal/60">
+            <div class="video-wrap relative aspect-[4/3] bg-black overflow-hidden">
+              <video allowfullscreen="allowfullscreen" preload="none" playsinline="" poster="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba5f1636f2_ae6dcf22e0946015.png" controls="" class="demo-video w-full h-full object-cover">
+                <source src="videos/gamedemo.mp4" type="video/mp4">
+              </video>
+              <button aria-label="Play reel" class="play-btn absolute inset-0 flex items-center justify-center group"><span class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/95 text-ink flex items-center justify-center shadow-2xl group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1 text-xl"></i></span></button>
+            </div>
+            <div class="flex items-center justify-between px-1 pt-3 text-xs sm:text-sm">
+              <span class="text-white/70"><i class="fa-solid fa-film mr-2 text-glow"></i>Game Demos</span>
+              <span class="text-white/40">Robot Arena, Special Delivery, Creator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="intro" class="bg-coal border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 md:py-20 grid md:grid-cols-12 gap-10">
+        <h2 class="md:col-span-5 font-serif text-5xl md:text-6xl leading-none">
+          Cool…<br><span class="italic text-white/60">So What?</span></h2>
+        <div class="md:col-span-7">
+          <p class="text-white/75 text-lg leading-relaxed">
+            Ever wanted to experience something surreal in 3D, something an AI's flat 2D replica can't recreate? Every project here is a real, explorable model — open the Blender file and you can walk around it, zoom in, and see how it was built.
+          </p>
+          <div id="stats" class="mt-10 grid grid-cols-3 border border-white/15">
+            <div class="p-4 sm:p-6 border-r border-white/15">
+              <p class="font-serif text-4xl sm:text-5xl">16</p>
+              <p class="text-xs sm:text-sm text-white/50 mt-1">Projects built</p>
+            </div>
+            <div class="p-4 sm:p-6 border-r border-white/15">
+              <p class="font-serif text-4xl sm:text-5xl">4</p>
+              <p class="text-xs sm:text-sm text-white/50 mt-1">Core tools</p>
+            </div>
+            <div class="p-4 sm:p-6">
+              <p class="font-serif text-4xl sm:text-5xl">1</p>
+              <p class="text-xs sm:text-sm text-white/50 mt-1">Cube to start</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="scroll-mt-16 relative">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-20 md:pt-28">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-glow">Selected work</p>
+            <h2 class="font-serif text-5xl sm:text-6xl md:text-7xl mt-3">Projects</h2>
+          </div>
+          <p class="max-w-md text-white/60">Each build below has a demo video walking through the model, a couple of close-up images, and notes on how it came together.</p>
+        </div>
+      </div>
+
+      <!-- Sticky project index -->
+      <div id="project-index" class="sticky top-[68px] z-40 mt-10 bg-ink/90 backdrop-blur border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="flex gap-2 overflow-x-auto no-scrollbar py-3">
+            <a href="#abysmal" data-proj="abysmal" class="proj-chip shrink-0 px-4 py-2 text-sm border border-white/20 hover:border-white hover:text-white transition text-white/70"><span class="text-white/40 mr-2">01</span>Abysmal</a>
+            <a href="#special-delivery" data-proj="special-delivery" class="proj-chip shrink-0 px-4 py-2 text-sm border border-white/20 hover:border-white hover:text-white transition text-white/70"><span class="text-white/40 mr-2">02</span>Special Delivery</a>
+            <a href="#creator" data-proj="creator" class="proj-chip shrink-0 px-4 py-2 text-sm border border-white/20 hover:border-white hover:text-white transition text-white/70"><span class="text-white/40 mr-2">03</span>Creator</a>
+            <a href="#robot-arena" data-proj="robot-arena" class="proj-chip shrink-0 px-4 py-2 text-sm border border-white/20 hover:border-white hover:text-white transition text-white/70"><span class="text-white/40 mr-2">04</span>Robot Arena</a>
+            <a href="#pocopixel" data-proj="pocopixel" class="proj-chip shrink-0 px-4 py-2 text-sm border border-white/20 hover:border-white hover:text-white transition text-white/70"><span class="text-white/40 mr-2">05</span>PocoPixel</a>
+            <a href="#archive" data-proj="archive" class="proj-chip shrink-0 px-4 py-2 text-sm border border-white/20 hover:border-white hover:text-white transition bg-white text-ink border-white"><i class="fa-solid fa-box-archive mr-2 text-white/40"></i>Archive</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 pb-10">
+
+        <!-- PROJECT 01 -->
+        <article id="abysmal" class="project scroll-mt-36 py-14 md:py-20">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
+            <div>
+              <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/50">
+                <span class="text-glow">01</span><span class="h-px w-8 bg-white/25"></span><span id="iblfwk"><i class="fa-solid fa-cube mr-1.5"></i>Blender &amp; Roblox studio</span>
+              </div>
+              <h3 class="font-serif text-5xl md:text-6xl mt-3">Abysmal</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Scripting</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Modeling</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">UI</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-8 border-2 border-white p-2 bg-coal">
+              <div class="video-wrap relative aspect-video bg-black overflow-hidden">
+                <video allowfullscreen="allowfullscreen" preload="none" playsinline="" poster="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba5f1636f2_5ab1c46135b70ded.png" controls="" class="demo-video w-full h-full object-cover">
+                  <source src="videos/abysmal.mp4" type="video/mp4" id="ib6shg">
+                </video>
+                <button aria-label="Play demo" class="play-btn absolute inset-0 flex items-center justify-center group bg-black/10"><span class="w-16 h-16 rounded-full bg-white/95 text-ink flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></button>
+                <span class="absolute top-3 left-3 text-[11px] uppercase tracking-widest bg-black/60 px-2.5 py-1">Demo video</span>
+              </div>
+            </div>
+            <div class="lg:col-span-4 border border-white/15 bg-slate2 p-6 md:p-8 flex flex-col justify-between gap-8">
+              <div>
+                <p class="font-serif text-2xl italic text-white/90">Find What Lies in the Abyss...</p>
+                <p class="mt-4 text-white/65 leading-relaxed">Inspired by the world in Akihito Tsukushi's <i id="izwf8w">Made in Abyss,</i>&nbsp;Abysmal invites players to explore the city of Holt and the abyss, which houses terrifying creatures.</p>
+              </div>
+              <dl class="grid grid-cols-2 gap-y-4 text-sm border-t border-white/10 pt-6">
+                <dt class="text-white/45">Software</dt>
+                <dd class="text-right">Blender &amp; Roblox Studio</dd>
+                <dt class="text-white/45">Status</dt>
+                <dd class="text-right">Unfinished</dd>
+                <dt class="text-white/45">Genre</dt>
+                <dd class="text-right">Fantasy/Horror</dd>
+              </dl>
+            </div>
+            <div class="lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2Ff999a633-d4d4-41b9-9794-658d0418418a.png" alt="Hobbit hole round door close-up" id="iby6lm" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2F056beeb4-c4b0-47e4-9da2-e07d2cfbe1d6.png" alt="Hobbit hole interior" id="ih9gwc" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 02 -->
+        <article id="special-delivery" class="project scroll-mt-36 py-14 md:py-20 border-t border-white/10">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
+            <div>
+              <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/50">
+                <span class="text-glow">02</span><span class="h-px w-8 bg-white/25"></span><span id="iszlf9"><i class="fa-solid fa-cube mr-1.5"></i>Blender &amp; Roblox studio</span>
+              </div>
+              <h3 class="font-serif text-5xl md:text-6xl mt-3">Special Delivery</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Scripting</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Modeling</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">VFX</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-4 lg:order-1 order-2 border border-white/15 bg-slate2 p-6 md:p-8 flex flex-col justify-between gap-8">
+              <div>
+                <p class="font-serif text-2xl italic text-white/90">Pushing the Limits of Imagination</p>
+                <p class="mt-4 text-white/65 leading-relaxed">Special Delivery is a Capture the Flag team-based game, relying on players' skill within different roles to overcome tough situations. Based off of the idea that anyone can create anything with cardboard as long as they have the imagination along with it.</p>
+              </div>
+              <dl class="grid grid-cols-2 gap-y-4 text-sm border-t border-white/10 pt-6">
+                <dt class="text-white/45">Software</dt>
+                <dd class="text-right">Blender &amp; Roblox Studio</dd>
+                <dt class="text-white/45">Status</dt>
+                <dd class="text-right">Unfinished</dd>
+                <dt class="text-white/45">Genre</dt>
+                <dd class="text-right">Action</dd>
+              </dl>
+            </div>
+            <div class="lg:col-span-8 lg:order-2 order-1 border-2 border-white p-2 bg-coal">
+              <div class="video-wrap relative aspect-video bg-black overflow-hidden">
+                <video allowfullscreen="allowfullscreen" preload="none" playsinline="" poster="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba5f1636f2_548d03058fbd10ad.png" controls="" class="demo-video w-full h-full object-cover">
+                  <source src="videos/specialdelivery.mp4" type="video/mp4">
+                </video>
+                <button aria-label="Play demo" class="play-btn absolute inset-0 flex items-center justify-center group bg-black/10"><span class="w-16 h-16 rounded-full bg-white/95 text-ink flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></button>
+                <span class="absolute top-3 left-3 text-[11px] uppercase tracking-widest bg-black/60 px-2.5 py-1">Demo video</span>
+              </div>
+            </div>
+            <div class="lg:col-span-12 order-3 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2Fe8f4052c-b23a-4a70-8233-99a9593798f7.png" alt="Festival food stall" id="i8673i" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2Fd6e8b1b7-e8bb-4fc7-8c5b-63eedf7f60b3.png" alt="Paper lanterns close-up" id="ih3fni" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 03 -->
+        <article id="creator" class="project scroll-mt-36 py-14 md:py-20 border-t border-white/10">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
+            <div>
+              <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/50">
+                <span class="text-glow">03</span><span class="h-px w-8 bg-white/25"></span><span id="ieoxns"><i class="fa-solid fa-cube mr-1.5"></i>Love2d &amp; Vscode</span>
+              </div>
+              <h3 class="font-serif text-5xl md:text-6xl mt-3">Creator</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Scripting</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Sound</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">UI</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-8 border-2 border-white p-2 bg-coal">
+              <div class="video-wrap relative aspect-video bg-black overflow-hidden">
+                <video allowfullscreen="allowfullscreen" preload="none" playsinline="" poster="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_782b055592_94156f61f944c63f.png" controls="" class="demo-video w-full h-full object-cover">
+                  <source src="videos/creator.mp4" type="video/mp4" id="ili72g">
+                </video>
+                <button aria-label="Play demo" class="play-btn absolute inset-0 flex items-center justify-center group bg-black/10"><span class="w-16 h-16 rounded-full bg-white/95 text-ink flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></button>
+                <span class="absolute top-3 left-3 text-[11px] uppercase tracking-widest bg-black/60 px-2.5 py-1">Demo video</span>
+              </div>
+            </div>
+            <div class="lg:col-span-4 border border-white/15 bg-slate2 p-6 md:p-8 flex flex-col justify-between gap-8">
+              <div>
+                <p class="font-serif text-2xl italic text-white/90">Continuing the Legend of Frankenstein</p>
+                <p class="mt-4 text-white/65 leading-relaxed">Creator is a sequel to Victor Lavalle's Destroyer. In it, the main character, Akai, must forge his own path, regardless of his mother's wishes. Of course, he must also save the world without being seen. This is the first game featuring my own soundtrack.</p>
+              </div>
+              <dl class="grid grid-cols-2 gap-y-4 text-sm border-t border-white/10 pt-6">
+                <dt class="text-white/45">Software</dt>
+                <dd class="text-right">Love2D &amp; VSCode</dd>
+                <dt class="text-white/45">Status</dt>
+                <dd class="text-right">Completed</dd>
+                <dt class="text-white/45">Genre</dt>
+                <dd class="text-right">Story</dd>
+              </dl>
+            </div>
+            <div class="lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2Fe21744ac-c4a9-4ff7-92f0-a354e5fa5f86.png" alt="Mech head and mono-eye detail" id="i6mnj6" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2F9295b213-e500-47f0-a0f8-b192660cd3e5.png" alt="Mech wireframe view" id="i3u48a" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 04 -->
+        <article id="robot-arena" class="project scroll-mt-36 py-14 md:py-20 border-t border-white/10">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
+            <div id="iuqtrj">
+              <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/50">
+                <span class="text-glow">04</span><span class="h-px w-8 bg-white/25"></span><span id="i1yro5"><i class="fa-solid fa-gamepad mr-1.5"></i>Blender &amp; Roblox Studio</span>
+              </div>
+              <h3 class="font-serif text-5xl md:text-6xl mt-3">Robot Arena</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Scripting</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Modeling</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Animation</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-4 lg:order-1 order-2 border border-white/15 bg-slate2 p-6 md:p-8 flex flex-col justify-between gap-8">
+              <div>
+                <p class="font-serif text-2xl italic text-white/90">A Test of Coordination</p>
+                <p class="mt-4 text-white/65 leading-relaxed">Inspired by Voltron and Gundam, Robot Arena tasks players with defeating their opponent while only being able to control one limb of the mech. Therefore, players must work together to perform combo attacks and outmaneuver the other team.</p>
+              </div>
+              <dl class="grid grid-cols-2 gap-y-4 text-sm border-t border-white/10 pt-6">
+                <dt class="text-white/45">Software</dt>
+                <dd class="text-right">Blender &amp; Roblox Studio</dd>
+                <dt class="text-white/45">Status</dt>
+                <dd class="text-right">Unfinished</dd>
+                <dt class="text-white/45">Genre</dt>
+                <dd class="text-right">Team PvP Action</dd>
+              </dl>
+            </div>
+            <div class="lg:col-span-8 lg:order-2 order-1 border-2 border-white p-2 bg-coal">
+              <div class="video-wrap relative aspect-video bg-black overflow-hidden">
+                <video allowfullscreen="allowfullscreen" preload="none" playsinline="" poster="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_cdbfa8e4e6_ed8274bc71993bb5.png" controls="" class="demo-video w-full h-full object-cover">
+                  <source src="videos/robotarena.mp4" type="video/mp4">
+                </video>
+                <button aria-label="Play demo" class="play-btn absolute inset-0 flex items-center justify-center group bg-black/10"><span class="w-16 h-16 rounded-full bg-white/95 text-ink flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></button>
+                <span class="absolute top-3 left-3 text-[11px] uppercase tracking-widest bg-black/60 px-2.5 py-1">Demo video</span>
+              </div>
+            </div>
+            <div class="lg:col-span-12 order-3 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2Fadb1bcc8-a05e-4151-bf7e-3447b6c63c05.png" alt="Neon street level" id="ij9xch" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2F2dea2c10-bc08-4f5a-8017-ce17d2fdbc58.png" alt="City skyline aerial" id="imqk9c" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 05 -->
+        <article id="pocopixel" class="project scroll-mt-36 py-14 md:py-20 border-t border-white/10">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8">
+            <div>
+              <div class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/50">
+                <span class="text-glow">05</span><span class="h-px w-8 bg-white/25"></span><span id="i03lyi"><i class="fa-solid fa-gamepad mr-1.5"></i>VSCode<br></span>
+              </div>
+              <h3 class="font-serif text-5xl md:text-6xl mt-3">PocoPixel</h3>
+            </div>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Scripting</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">Web-Development</span>
+              <span class="px-3 py-1.5 border border-white/20 text-white/70">UI</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <div class="lg:col-span-8 border-2 border-white p-2 bg-coal">
+              <div class="video-wrap relative aspect-video bg-black overflow-hidden">
+                <video allowfullscreen="allowfullscreen" preload="none" playsinline="" poster="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6ba28530a5_c1ecea91adaf241d.png" controls="" class="demo-video w-full h-full object-cover">
+                  <source src="videos/pocopixel.mp4" type="video/mp4">
+                </video>
+                <button aria-label="Play demo" class="play-btn absolute inset-0 flex items-center justify-center group bg-black/10"><span class="w-16 h-16 rounded-full bg-white/95 text-ink flex items-center justify-center group-hover:scale-110 transition"><i class="fa-solid fa-play ml-1"></i></span></button>
+                <span class="absolute top-3 left-3 text-[11px] uppercase tracking-widest bg-black/60 px-2.5 py-1">Demo video</span>
+              </div>
+            </div>
+            <div class="lg:col-span-4 border border-white/15 bg-slate2 p-6 md:p-8 flex flex-col justify-between gap-8">
+              <div id="ilror3">
+                <p class="font-serif text-2xl italic text-white/90">Un Programa Maravilloso</p>
+                <p class="mt-4 text-white/65 leading-relaxed">PocoPixel is a website designed to aid Spanish students and teachers in preparing for an upcoming test. Started out as a favor for my Spanish teacher.</p>
+              </div>
+              <dl class="grid grid-cols-2 gap-y-4 text-sm border-t border-white/10 pt-6">
+                <dt class="text-white/45">Software</dt>
+                <dd class="text-right">VSCode</dd>
+                <dt class="text-white/45">Status</dt>
+                <dd class="text-right">Completed</dd>
+                <dt class="text-white/45">Genre</dt>
+                <dd class="text-right">Study Tool</dd>
+              </dl>
+            </div>
+            <div class="lg:col-span-12 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2F07e2ab0a-fa05-4a2a-8f1f-ded62b28a391.png" alt="Temple entrance" id="inrgba" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+              <figure class="aspect-[4/3] border border-white/15 overflow-hidden bg-black">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/S6CeTSPlLQgmJ1uKE9fhJdt63Gg2%2F894bc7fd-1834-4a93-8a43-f60690d16993.png" alt="Torch-lit inner chamber" id="im38mo" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARCHIVE -->
+        <div id="archive" class="scroll-mt-36 py-14 md:py-20 border-t border-white/10">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+            <div>
+              <p class="text-xs uppercase tracking-[0.25em] text-white/50">More builds</p>
+              <h3 class="font-serif text-4xl md:text-5xl mt-2">Behind the Scenes</h3>
+            </div>
+            <p class="text-white/50 text-sm max-w-sm">Smaller projects - Some will be released</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/15">
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Stream Big</p>
+                <p class="text-xs text-white/45 mt-1">Roblox Studio · Simulator</p>
+              </div><i class="fa-solid fa-chess-rook text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Blind Man's Labyrinth</p>
+                <p class="text-xs text-white/45 mt-1">JGrasp · Story</p>
+              </div><i class="fa-solid fa-school text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Zoo Famous</p>
+                <p class="text-xs text-white/45 mt-1">Roblox Studio · Simulator</p>
+              </div><i class="fa-solid fa-chair text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Recreation - Mario</p>
+                <p class="text-xs text-white/45 mt-1">Processing</p>
+              </div><i class="fa-solid fa-house-chimney text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Ro-Gundam</p>
+                <p class="text-xs text-white/45 mt-1">Roblox Studio <span id="i15rh7"></span>· Adventure</p>
+              </div><i class="fa-solid fa-seedling text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Treehouse Mania</p>
+                <p class="text-xs text-white/45 mt-1">Roblox Studio · Obby</p>
+              </div><i class="fa-solid fa-egg text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div id="iv77xs">
+                <p class="font-serif text-2xl">Recreation - Fruit Ninja</p>
+                <p class="text-xs text-white/45 mt-1">Processing</p>
+              </div><i class="fa-solid fa-city text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">India's Many Religions</p>
+                <p class="text-xs text-white/45 mt-1">Roblox Studio · Educational</p>
+              </div><i class="fa-solid fa-champagne-glasses text-white/30"></i>
+            </div>
+            <div class="flex items-center justify-between p-5 border-r border-b border-white/15 hover:bg-white/5 transition">
+              <div>
+                <p class="font-serif text-2xl">Holiday Battlegrounds</p>
+                <p class="text-xs text-white/45 mt-1">Roblox Studio · Fighting</p>
+              </div><i class="fa-solid fa-spa text-white/30"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="scroll-mt-16 bg-coal border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+        <div class="max-w-2xl">
+          <p class="text-xs uppercase tracking-[0.25em] text-glow">How it's made</p>
+          <h2 class="font-serif text-5xl sm:text-6xl md:text-7xl mt-3">Process</h2>
+          <p class="mt-5 text-white/60 text-lg">Every model follows the same path — from a default cube to something you can explore or play.</p>
+        </div>
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div id="step-1" class="border-2 border-white/90 p-6 md:p-7 bg-soul/40 hover:-translate-y-1 transition">
+            <div class="flex items-center justify-between"><span class="font-serif text-5xl text-white/25">01</span><i class="fa-solid fa-cube text-2xl text-glow"></i></div>
+            <h3 class="mt-8 text-xl font-medium">Start with a cube</h3>
+            <p class="mt-3 text-white/55 text-sm leading-relaxed">Block out the big shapes and proportions with simple primitives before any detail.</p>
+          </div>
+          <div id="step-2" class="border-2 border-white/90 p-6 md:p-7 bg-soul/40 hover:-translate-y-1 transition">
+            <div class="flex items-center justify-between"><span class="font-serif text-5xl text-white/25">02</span><i class="fa-solid fa-draw-polygon text-2xl text-glow"></i></div>
+            <h3 class="mt-8 text-xl font-medium">Shape &amp; detail</h3>
+            <p class="mt-3 text-white/55 text-sm leading-relaxed">Refine the mesh — bevels, loops and modifiers until the silhouette reads well.</p>
+          </div>
+          <div id="step-3" class="border-2 border-white/90 p-6 md:p-7 bg-soul/40 hover:-translate-y-1 transition">
+            <div class="flex items-center justify-between"><span class="font-serif text-5xl text-white/25">03</span><i class="fa-solid fa-palette text-2xl text-glow"></i></div>
+            <h3 class="mt-8 text-xl font-medium">Material &amp; light</h3>
+            <p class="mt-3 text-white/55 text-sm leading-relaxed">Add colour, textures and lighting to give the scene its mood and atmosphere.</p>
+          </div>
+          <div id="step-4" class="border-2 border-white/90 p-6 md:p-7 bg-soul/40 hover:-translate-y-1 transition">
+            <div class="flex items-center justify-between"><span class="font-serif text-5xl text-white/25">04</span><i class="fa-solid fa-gamepad text-2xl text-glow"></i></div>
+            <h3 class="mt-8 text-xl font-medium">Bring it to life</h3>
+            <p class="mt-3 text-white/55 text-sm leading-relaxed">Render a demo, or import it into Roblox Studio as a game-ready asset.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-14 items-center">
+        <div id="about-cube" class="lg:col-span-5 flex justify-center">
+          <div class="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] border border-white/15 flex items-center justify-center">
+            <span class="absolute top-3 left-3 text-[10px] uppercase tracking-widest text-white/40">Default cube · 001</span>
+            <span class="absolute bottom-3 right-3 text-[10px] uppercase tracking-widest text-white/40">x 1.00 · y 1.00 · z 1.00</span>
+            <div class="cube-scene w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] [--h:60px] sm:[--h:75px]">
+              <div class="cube relative w-full h-full">
+                <div class="f1"></div>
+                <div class="f2"></div>
+                <div class="f3"></div>
+                <div class="f4"></div>
+                <div class="f5"></div>
+                <div class="f6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <p class="text-xs uppercase tracking-[0.25em] text-glow">About</p>
+          <h2 class="font-serif text-5xl sm:text-6xl md:text-7xl mt-3 leading-[0.95]">
+            It all started<br><span class="italic text-white/60">with a cube…</span></h2>
+          <div class="mt-8 space-y-5 text-white/70 text-lg leading-relaxed">
+            <p>Originally, I thought Blender was a complex piece of software that only professionals used. Eventually my models — built from basic Roblox parts — weren't looking the way I wanted without outside help.</p>
+            <p id="ifko09">My Blender journey started out ambitious, with my first ever person model. Or… something like one. I got better over time, and now I use my Blender models as assets for the games I make.</p>
+            <p class="font-serif italic text-2xl text-white">It's fun to watch a simple cube transform into something huge.</p>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-3">
+            <span class="px-4 py-2 border border-white/25 text-sm"><i class="fa-solid fa-cube mr-2 text-glow"></i>Blender</span>
+            <span class="px-4 py-2 border border-white/25 text-sm"><i class="fa-solid fa-gamepad mr-2 text-glow"></i>Roblox Studio</span>
+            <span class="px-4 py-2 border border-white/25 text-sm"><i class="fa-solid fa-code mr-2 text-glow"></i>Luau</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-mt-16 max-w-7xl mx-auto px-5 sm:px-8 pb-20 md:pb-28">
+      <div class="border-2 border-white bg-coal relative overflow-hidden">
+        <div class="absolute -bottom-32 -right-20 w-[420px] h-[420px] rounded-full bg-glow/10 blur-3xl pointer-events-none"></div>
+        <div class="relative p-8 sm:p-12 md:p-16 grid md:grid-cols-12 gap-10 items-end">
+          <div class="md:col-span-8">
+            <p class="text-xs uppercase tracking-[0.25em] text-white/50">Contact</p>
+            <h2 class="font-serif text-5xl sm:text-6xl md:text-7xl mt-3 leading-[0.95]">
+              Got an idea worth<br class="hidden sm:block"> <span class="italic text-glow">building in 3D?</span></h2>
+            <p class="mt-6 text-white/60 max-w-lg">Whether it's a collab on a game, feedback on a project, or just to say hi — my inbox is open.</p>
+          </div>
+          <div class="md:col-span-4 flex flex-col gap-3">
+            <a href="mailto:noahmontreynaud@gmail.com" class="inline-flex items-center justify-between gap-3 px-6 py-4 bg-white text-ink font-medium hover:bg-glow transition"><span class="truncate">noahmontreynaud@gmail.com</span></a>
+            <a href="https://github.com/noahasc24" class="inline-flex items-center justify-between gap-3 px-6 py-4 border-2 border-white/80 hover:bg-white/10 transition"><span id="i42ht1"><i class="fa-brands fa-github mr-2"></i>GitHub</span><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-coal border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <a href="#home" class="flex items-center gap-2.5"><span class="w-7 h-7 border-2 border-white flex items-center justify-center"><span class="w-2 h-2 bg-glow"></span></span><span class="font-serif text-xl">Soul_Products</span></a>
+      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/60">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#process" class="hover:text-white">Process</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <p class="text-xs text-white/40">© 2025 Soul_Products. Made one cube at a time.</p>
     </div>
-    <div class="p1">
-        Originally, I considered Blender to be a complex software that only professionals used. Eventually, it got to a point where my models were looking terrible without any outside help (using the basic Roblox parts). <br>My journey to Blender started out ambitious, with the creation of my first person model! Or something...
-    </div>
-    <div class="man">
-        <img src="images/Screenshot 2024-07-21 230442.png" width="500" height="500">
-    </div>
-    <div class="p2">
-        I got better over time and now use my blender models as assets in making games. To me, it's fun to watch a simple cube transform into something huge.
-    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden') === false;
+      menuBtn.innerHTML = open ?
+        '<i class="fa-solid fa-xmark text-lg"></i>' :
+        '<i class="fa-solid fa-bars text-lg"></i>';
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.innerHTML = '<i class="fa-solid fa-bars text-lg"></i>';
+    }));
+
+    // Video play overlays
+    document.querySelectorAll('.video-wrap').forEach(wrap => {
+      const video = wrap.querySelector('video');
+      const btn = wrap.querySelector('.play-btn');
+      btn.addEventListener('click', () => {
+        video.setAttribute('controls', '');
+        btn.classList.add('hidden');
+        const p = video.play();
+        if (p && p.catch) p.catch(() => {});
+      });
+    });
+
+    // Active nav highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sectionObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l => {
+            const active = l.dataset.link === e.target.id;
+            l.classList.toggle('text-white', active);
+            l.classList.toggle('text-white/70', !active);
+          });
+        }
+      });
+    }, {
+      rootMargin: '-45% 0px -50% 0px'
+    });
+    ['home', 'projects', 'process', 'about'].forEach(id => sectionObs.observe(document.getElementById(id)));
+
+    // Active project chip
+    const chips = document.querySelectorAll('.proj-chip');
+    const projObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          chips.forEach(c => {
+            const active = c.dataset.proj === e.target.id;
+            c.classList.toggle('bg-white', active);
+            c.classList.toggle('text-ink', active);
+            c.classList.toggle('border-white', active);
+            c.classList.toggle('text-white/70', !active);
+          });
+        }
+      });
+    }, {
+      rootMargin: '-40% 0px -55% 0px'
+    });
+    document.querySelectorAll('.project, #archive').forEach(p => projObs.observe(p));
+  </script>
 </body>
-<footer>
-    <div class="footer">
-        <nav>
-            <a href="https://www.roblox.com/users/348647703/profile#!/creations">Link to games I've made</a>
-            <p>All assets are made by Soul Products</p>
-            <img src="images/image-removebg-preview (27).png" width = 50px; height = 50px;>
-        </nav>
-        
-    </div>
-</footer>
+
+</html>
